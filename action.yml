@@ -1,15 +1,15 @@
 name: 'Submodule Checkout'
-author: 'James Webb'
-description: 'GitHub action for checking out submodules defined within a repository'
+author: 'Rishikesavan Ramesh'
+description: 'GitHub action for checking out submodules defined within a repository using PAT'
 inputs:
-  ssh-key:
-    description: 'SSH private key for private submodule access'
+  pat:
+    description: 'PAT for private submodule access'
     required: false
     default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args: ['${{ inputs.ssh-key }}']
+  args: ['${{ inputs.pat }}']
 branding:
-  icon: 'box'
-  color: 'blue'
+  icon: 'crosshair'
+  color: 'green'

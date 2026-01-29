@@ -4,22 +4,22 @@ This action checks out a private or public submodule hosted within GitHub.
 
 ## Inputs
 
-### `ssh-key`
+### `pat`
 
-An optional SSH key used when checking out private submodules.
+A PAT used when checking out private submodules.
 
 ## Example usage
 
 #### Public Submodules:
 
 ```
-uses: jwsi/submodule-checkout@v1
+uses: rishikesavanramesh/checkout-submodules@v1
 ```
 
 #### Private Submodules:
 
 ```
-uses: jwsi/submodule-checkout@v1
+uses: rishikesavanramesh/checkout-submodules@v1
 with:
-  ssh-key: '${{ secrets.DEPLOY_KEY }}'
+  pat: '${{ secrets.PAT }}'
 ```
